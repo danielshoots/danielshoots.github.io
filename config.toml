@@ -1,0 +1,4 @@
+baseURL = 'http://danielshoots.com/'
+languageCode = 'en-us'
+title = 'Daniel Shoots'
+theme = "ananke"
