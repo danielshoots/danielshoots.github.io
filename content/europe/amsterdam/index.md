@@ -6,3 +6,7 @@ link: /europe/amsterdam/
 image: /europe/amsterdam/img/cover.jpg
 draft: false
 ---
+
+This is just an example page to demonstrate how it might work.
+
+{{< gallery >}}

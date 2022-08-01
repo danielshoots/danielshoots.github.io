@@ -6,3 +6,4 @@ link: /europe/london/
 image: /europe/london/img/cover.jpg
 draft: false
 ---
+{{< gallery >}}
