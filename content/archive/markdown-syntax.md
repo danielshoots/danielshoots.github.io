@@ -1,7 +1,7 @@
 ---
 title: "Markdown Syntax"
 date: 2022-07-27T20:59:49+01:00
-draft: false
+draft: true
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.

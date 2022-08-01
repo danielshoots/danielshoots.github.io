@@ -1,4 +1,34 @@
 baseURL = 'https://danielshoots.github.io/'
 languageCode = 'en-us'
 title = 'Daniel Shoots'
-theme = "ananke"
+theme = "showcase"
+Paginate = 1000
+googleAnalytics = ""
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+
+# this setting should always be set to false, otherwise it will break the section navigation bar
+pluralizelisttitles = false
+
+[params]
+  author = "Daniel Scarfe"
+  description = "Minimal, one page, theme for showcasing your work"
+  message = "My page for sharing wildlife & travel photography, every once in a while."
+  hideAutoMenu = false
+
+  # Pagination options
+  paginate = 12
+  multipage = true
+
+  # Dark mode
+  darkMode = true
+
+#[[menu.main]]
+#  name = "External"
+#  url = "https://example.com"
+
+[social]
+  facebook = "https://facebook.com"
+  twitter = "https://twitter.com"
+  instagram = "https://instagram.com"
+  linkedin = "https://linkedin.com"
+
