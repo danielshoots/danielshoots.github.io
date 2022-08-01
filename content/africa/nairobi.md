@@ -1,7 +1,8 @@
 ---
-title: Nairobi
+title: Nairobi, Kenya
 date: 2022-30-07
 subtitle: 2022
-link: https://example.com/
+link: /africa/nairobi
 image: /img/nairobi-tmp.jpg
 ---
+

@@ -1,0 +1,12 @@
+name = "Daniel Shoots"
+license = "MIT"
+licenselink = ""
+description = "Minimal, one-page theme for showcasing photographs"
+homepage = ""
+tags = ["clean", "gallery", "minimal", "minimalist", "mobile", "one page", "personal", "responsive", "simple", "single page", "tailwind", "starter", "projects", "white" ]
+features = ["responsive", "portfolio", "gallery"]
+min_version = "0.69.0"
+
+[author]
+  name = "Daniel Scarfe"
+  homepage = "https://danielshoots.com"
