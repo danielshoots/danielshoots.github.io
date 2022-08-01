@@ -27,8 +27,8 @@ pluralizelisttitles = false
 #  url = "https://example.com"
 
 [social]
-  facebook = "https://facebook.com"
-  twitter = "https://twitter.com"
-  instagram = "https://instagram.com"
-  linkedin = "https://linkedin.com"
+#  facebook = "https://facebook.com"
+#  twitter = "https://twitter.com"
+  instagram = "https://www.instagram.com/danielshootsphotos/"
+  linkedin = "https://linkedin.com/in/daniel-scarfe"
 
