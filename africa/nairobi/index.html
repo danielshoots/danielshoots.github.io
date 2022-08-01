@@ -63,21 +63,10 @@
 </svg>
 <span class="ml-3 text-xl">Daniel Scarfe</span></a>
     <nav
-      class="md:ml-auto flex flex-wrap items-center text-base justify-center dark:text-white  multipage "
+      class="md:ml-auto flex flex-wrap items-center text-base justify-center dark:text-white "
     >
       
       
-      
-      <div
-        class="toggle-dark-mode select-none p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-gray-200 dark:hover:text-gray-900"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg"
-        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-          <path d="M12 9a3 3 0 0 0 0 6v-6z" />
-          <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5z" />
-        </svg>
-      </div>
       
     </nav>
   </div>
@@ -86,9 +75,39 @@
 
 <section class="text-gray-700 body-font dark:text-white">
   <div class="container px-5 py-8 mx-auto">
-    <h1 class="text-2xl font-bold my-4">Nairobi</h1>
+    <h1 class="text-2xl font-bold my-4">Nairobi, Kenya</h1>
     <div>
-      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
+<div style="display: flex">
+
+
+    
+    
+    <a href="https://danielshoots.github.io/africa/nairobi/img/example-1.jpg" data-lightbox="x"><img src="https://danielshoots.github.io/africa/nairobi/img/example-1_hu28f4843e74eb3d9e4f6dc3a7f7955994_95467_300x230_fill_q20_box_smart1.jpg" /></a>
+    &nbsp;
+    
+    
+    <a href="https://danielshoots.github.io/africa/nairobi/img/example-2.jpg" data-lightbox="x"><img src="https://danielshoots.github.io/africa/nairobi/img/example-2_hu57ff5230b49eddfc12ccb3233288fe37_154411_300x230_fill_q20_box_smart1.jpg" /></a>
+    &nbsp;
+    
+    
+    <a href="https://danielshoots.github.io/africa/nairobi/img/example-3.jpg" data-lightbox="x"><img src="https://danielshoots.github.io/africa/nairobi/img/example-3_hu90ad62d4e6b125f3e31fe976f29798b4_195860_300x230_fill_q20_box_smart1.jpg" /></a>
+    &nbsp;
+    
+    
+    <a href="https://danielshoots.github.io/africa/nairobi/img/example-4.jpg" data-lightbox="x"><img src="https://danielshoots.github.io/africa/nairobi/img/example-4_hu2d160f031a27556430cd51653d9d5276_162832_300x230_fill_q20_box_smart1.jpg" /></a>
+    &nbsp;
+    
+    
+    <a href="https://danielshoots.github.io/africa/nairobi/img/example-5.jpg" data-lightbox="x"><img src="https://danielshoots.github.io/africa/nairobi/img/example-5_hu2f9723b38578c1ae85b609408075b94f_177220_300x230_fill_q20_box_smart1.jpg" /></a>
+    &nbsp;
+    
+
+</div>
+
     </div>
   </div>
 </section>
@@ -208,25 +227,6 @@
     showAllButton.addEventListener("click", showAll);
   }
 
-  
-  const darkmode = document.querySelector('.toggle-dark-mode');
-  function toggleDarkMode() {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('darkmode', 'light')
-    } else {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('darkmode', 'dark')
-    }
-  }
-  if (darkmode) {
-    darkmode.addEventListener('click', toggleDarkMode);
-  }
-
-  const isDark = localStorage.getItem('darkmode');
-  if(isDark && isDark === 'dark') {
-    toggleDarkMode();
-  }
   
 </script>
 </body>
