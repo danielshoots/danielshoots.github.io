@@ -87,6 +87,17 @@
       
       
       
+      <div
+        class="toggle-dark-mode select-none p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-gray-200 dark:hover:text-gray-900"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M12 9a3 3 0 0 0 0 6v-6z" />
+          <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5z" />
+        </svg>
+      </div>
+      
     </nav>
   </div>
 </header>
@@ -112,7 +123,7 @@
       class="card p-4 md:w-1/3 sm:mb-4 mb-6 hover:shadow-xl hover:bg-gray-400 transition duration-200 ease-in rounded-lg europe">
       <div class="rounded-lg h-64 overflow-hidden relative">
         
-        <img alt="London, UK" class="object-cover object-center h-full w-full"
+        <img alt="London" class="object-cover object-center h-full w-full"
           src="/europe/london/img/cover.jpg" />
         
         <span class="bg-blue-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
@@ -120,7 +131,7 @@
         </span>
         <h2
           class="text-white px-2 py-1 tracking-widest text-2xl leading-tight font-extrabold font-bree text-center w-full h-full flex justify-center items-center absolute top-0 left-0">
-          London, UK
+          London
         </h2>
         <p
           class="text-white px-2 py-1 tracking-widest text-md leading-tight font-light w-full text-center absolute bottom-0 left-0">
@@ -133,7 +144,7 @@
       class="card p-4 md:w-1/3 sm:mb-4 mb-6 hover:shadow-xl hover:bg-gray-400 transition duration-200 ease-in rounded-lg europe">
       <div class="rounded-lg h-64 overflow-hidden relative">
         
-        <img alt="Amsterdam, Holland" class="object-cover object-center h-full w-full"
+        <img alt="Amsterdam" class="object-cover object-center h-full w-full"
           src="/europe/amsterdam/img/cover.jpg" />
         
         <span class="bg-blue-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
@@ -141,7 +152,7 @@
         </span>
         <h2
           class="text-white px-2 py-1 tracking-widest text-2xl leading-tight font-extrabold font-bree text-center w-full h-full flex justify-center items-center absolute top-0 left-0">
-          Amsterdam, Holland
+          Amsterdam
         </h2>
         <p
           class="text-white px-2 py-1 tracking-widest text-md leading-tight font-light w-full text-center absolute bottom-0 left-0">
@@ -167,8 +178,7 @@
       class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-1 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
     >
       <a href="https://danielshoots.github.io/">&copy; Daniel Scarfe</a>
-      &nbsp;|&nbsp;
-      <span>Powered by Hugo & GitHub Pages</span>
+      <span>&nbsp;|&nbsp;&nbsp;Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a></span>
     </p>
     <span
       class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
@@ -275,6 +285,25 @@
     showAllButton.addEventListener("click", showAll);
   }
 
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
   
 </script>
 </body>

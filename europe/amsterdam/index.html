@@ -68,21 +68,36 @@
       
       
       
+      <div
+        class="toggle-dark-mode select-none p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-gray-200 dark:hover:text-gray-900"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M12 9a3 3 0 0 0 0 6v-6z" />
+          <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5z" />
+        </svg>
+      </div>
+      
     </nav>
   </div>
 </header>
 <div id="content">
 
-<section class="text-gray-700 body-font dark:text-white">
-  <div class="container px-5 py-8 mx-auto">
-    <h1 class="text-2xl font-bold my-4">Amsterdam, Holland</h1>
+<section class="text-gray-700 body-font">
+  <div class="container px-5 py-8 mx-auto"><div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+  
+  <h1 class="text-gray-900 dark:text-white font-medium title-font text-2xl mb-2 sm:mb-0 text-center w-full">
+    My page for sharing wildlife &amp; travel photography, every once in a while.
+  </h1>
+  
+</div><h1 class="text-2xl font-bold my-4">Amsterdam</h1>
     <div>
       <p>This is just an example page to demonstrate how it might work.</p>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
 
-<div style="display: flex">
 
 
     
@@ -91,7 +106,6 @@
     &nbsp;
     
 
-</div>
 
     </div>
   </div>
@@ -106,8 +120,7 @@
       class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-1 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
     >
       <a href="https://danielshoots.github.io/">&copy; Daniel Scarfe</a>
-      &nbsp;|&nbsp;
-      <span>Powered by Hugo & GitHub Pages</span>
+      <span>&nbsp;|&nbsp;&nbsp;Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a></span>
     </p>
     <span
       class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
@@ -214,6 +227,25 @@
     showAllButton.addEventListener("click", showAll);
   }
 
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
   
 </script>
 </body>
