@@ -22,7 +22,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: npm i && hugo -D --gc
+        run: npm i && hugo --gc
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
