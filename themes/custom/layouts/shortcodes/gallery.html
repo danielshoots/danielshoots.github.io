@@ -1,12 +1,28 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css"></link>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.1.0/lg-fullscreen.min.js"></script>
+
+
+<script>
+  $(document).ready(function() {
+    $("#lightgallery").lightGallery(); 
+  });
+</script>
+
+
+<div id="lightgallery" style="display:flex">
 {{ $image := (.Page.Resources.ByType "image") }}
 {{ with $image }}
     {{ range . }}
     {{ $resized := .Fill "300x230 q20" }}
-    <a href="{{ .Permalink }}" data-lightbox="x"><img src="{{ $resized.Permalink }}" /></a>
+    <a href="{{ .Permalink }}">
+      <img src="{{ .Permalink }}" width="300" height="230" />
+    </a>
     &nbsp;
     {{ end }}
 {{ end }}
+</div>

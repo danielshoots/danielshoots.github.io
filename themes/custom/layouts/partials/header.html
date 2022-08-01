@@ -31,6 +31,13 @@
       class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
       >{{ .Name }}</a>
       {{ end }}
+      {{ if and (eq .Site.Params.hideAutoMenu false) (eq $.IsNode false ) }}
+      <a
+        class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 show-all"
+        href="{{ .Site.BaseURL }}"
+        >&#60; Back</a
+      >
+      {{ end }}
       {{ if .Site.Params.darkMode }}
       <div
         class="toggle-dark-mode select-none p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-gray-200 dark:hover:text-gray-900"

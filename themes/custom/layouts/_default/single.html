@@ -2,8 +2,14 @@
 
 <section class="text-gray-700 body-font">
   <div class="container px-5 py-8 mx-auto">
-    {{- partial "custom-message.html" . -}}
-    <h1 class="text-2xl font-bold my-4">{{ .Title }}</h1>
+    <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+      <h1 class="text-gray-900 dark:text-white font-medium title-font text-2xl mb-2 sm:mb-0 text-center w-full">
+        {{ .Description }}
+      </h1>
+      <h2 class="text-gray-900 dark:text-white font-medium title-font text-2x2 mb-2 sm:mb-0 text-center w-full">
+        {{ .Date }}
+      </h2>
+    </div>
     <div>
       {{ .Content }}
     </div>
