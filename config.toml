@@ -20,11 +20,14 @@ pluralizelisttitles = false
   multipage = false
 
   # Dark mode
-  darkMode = false
+  darkMode = true
 
 #[[menu.main]]
 #  name = "External"
 #  url = "https://example.com"
+
+[footer]
+  custom = "Hello World!"
 
 [social]
 #  email = "contact@danielshoots.com"
